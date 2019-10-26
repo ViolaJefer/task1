@@ -1,0 +1,8 @@
+a, b, c, d = map( int, input().split())
+for i in range(b):
+  if i<1:
+    print(chr(c)*a)
+  if i<b-2:
+    print(chr(c), chr(d)*(a-2),chr(c))
+  if i == b-1:
+    print(chr(c)*a)
