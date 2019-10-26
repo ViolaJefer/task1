@@ -1,8 +1,13 @@
-a, b, c, d = map( int, input().split())
-for i in range(b):
-  if i<1:
-    print(chr(c)*a)
-  if i<b-2:
-    print(chr(c), chr(d)*(a-2),chr(c))
-  if i == b-1:
-    print(chr(c)*a)
+def print_chars_and_return_sum(a, b, c, d):
+    if 126 < (a or b) < 32 or 126 < (a and b) < 32:
+        return -1
+    if (c or d) > 30 or (c and d) > 30:
+        return -1
+    for i in range(d):
+        if i < 1:
+            print(chr(a) * c)
+        if i < d - 2:
+            print(chr(a), chr(b) * (c - 2), chr(a))
+        if i == d - 1:
+            print(chr(a) * c)
+    print(c*d)
